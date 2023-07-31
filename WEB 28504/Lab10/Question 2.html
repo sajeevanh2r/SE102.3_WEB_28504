@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Year of Birth from NIC</title>
+</head>
+<body>
+    <h1>Extract Year of Birth from NIC</h1>
+    <label for="nic">Enter NIC Number:</label>
+    <input type="text" id="nic">
+    <button onclick="extractYearOfBirth()">Get Year of Birth</button>
+
+    <script>
+        function extractYearOfBirth() {
+            const nic = document.getElementById('nic').value.trim();
+            
+            // Assuming the year of birth is the first 4 characters of the NIC
+            const yearOfBirth = nic.substr(0, 4);
+            
+            // You can perform further validations on the extracted yearOfBirth if needed
+            // For example, checking if it's a valid year, etc.
+
+            alert('Year of Birth: ' + yearOfBirth);
+        }
+    </script>
+</body>
+</html>
